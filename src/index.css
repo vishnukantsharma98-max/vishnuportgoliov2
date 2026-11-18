@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Light mode defaults */
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Dark mode pitch black background */
+.dark body {
+  background-color: #000000;
+  color: #f8fafc;
+}
+
+/* Card styling for light and dark modes */
+.portfolio-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+.dark .portfolio-card {
+  background: #0a0a0a;
+  border: 1px solid #262626;
+  box-shadow: none;
+}
